@@ -1,0 +1,33 @@
+
+
+
+
+<h1>StaticPages#index</h1>
+<p>Find me in app/views/static_pages/index.html.erb</p>
+<button id = "button1" onclick="effect()">ボタンを赤にする</button>
+
+<script type="text/javascript">
+  var button1 = document.getElementById("button1");
+  button1.style.backgroundColor = "yellow" 
+  
+
+function effect(){
+/*  var button1 = document.getElementById("button1") */
+  if ( button1.style.backgroundColor == "green" ) {
+button1.style.backgroundColor = "red";
+}
+else
+{
+button1.style.backgroundColor = "green";
+}
+
+}
+window.onload = function() {
+  setInterval(function() {
+    var dd = new Date();
+    document.getElementById("T1").innerHTML = dd.toLocaleString();
+  }, 1000);
+}
+</script>
+
+<div id="T1"></div>
